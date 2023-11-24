@@ -6,7 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-$routes->get('/mdashboard/home', 'mdashboard\ProfileController::home');
+$routes->get('/mdashboard/home', 'mdashboard\ProductsController::index');
 $routes->get('/mdashboard/register', 'mdashboard\Auth::register');
 $routes->post('/register', 'mdashboard\Auth::register');
 $routes->get('/mdashboard/login', 'mdashboard\Auth::login');
