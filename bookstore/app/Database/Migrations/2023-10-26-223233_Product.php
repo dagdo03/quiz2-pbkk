@@ -36,9 +36,6 @@ class Product extends Migration
                 'constraint' => '10,2',
                 'default' => '0.00', 
             ],
-            'image' => [
-                'type' => 'TEXT',
-            ],
             'fk_catid' => [
                 'type' => 'INTEGER',
                 'constraint' => 11,

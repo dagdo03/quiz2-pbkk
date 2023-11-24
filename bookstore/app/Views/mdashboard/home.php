@@ -15,7 +15,7 @@
         <div class="container mx-auto" x-data="{open:false}">
             <nav class="flex justify-between ">
                 <div class="flex items-center justify-between w-full px-4 py-2 lg:px-2 ">
-                    <a href="" class="text-2xl text-gray-700">Logo</a>
+                    <a href="" class="text-2xl text-gray-700">Ecommerce</a>
                     <div class="flex items-center lg:hidden ">
                         <a href="" class="mr-4 ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
@@ -69,7 +69,7 @@
             </div>
             <div class="absolute inset-0 z-10 h-screen p-3 text-gray-700 duration-500 transform shadow-md  bg-blue-50 w-80 lg:hidden lg:transform-none lg:relative" :class="{'translate-x-0 ease-in-opacity-100' :open===true, '-translate-x-full ease-out opacity-0' : open===false}">
                 <div class="flex justify-between">
-                    <a class="p-2 text-2xl font-bold " href="#">Logo</a>
+                    <a class="p-2 text-2xl font-bold logo-link" href="<?= base_url('mdashboard/') ?>home">Logo</a>
                     <button class="p-2 rounded-md hover:text-blue-300 lg:hidden " @click="open=false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
@@ -147,57 +147,57 @@
                     </p>
                 </div>
                 <div class="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-3">
-                    <div class="w-full p-8 text-center transition-all bg-white rounded shadow hover:shadow-lg">
+                <button class="w-full p-8 text-center transition-all bg-white rounded shadow hover:shadow-lg genre-button" data-genre="Mystery">
                         <div class="inline-block p-2 mb-4 bg-blue-400 rounded-full text-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="text-white" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm-.5 5a.5.5 0 0 1 1 0v1.5H10a.5.5 0 0 1 0 1H8.5V9a.5.5 0 0 1-1 0V7.5H6a.5.5 0 0 1 0-1h1.5V5z" />
                             </svg>
                         </div>
-                        <h3 class="text-center font-semibold text-black "> Mystery </h3>
-                    </div>
-                    <div class="w-full p-8 text-center transition-all bg-white rounded shadow hover:shadow-lg">
+                        <h3 class="text-center font-semibold text-black"> Mystery </h3>
+                </button>
+                <button class="w-full p-8 text-center transition-all bg-white rounded shadow hover:shadow-lg genre-button" data-genre="Sci-Fi">
                         <div class="inline-block p-2 mb-4 bg-blue-400 rounded-full text-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="text-white" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm-.5 5a.5.5 0 0 1 1 0v1.5H10a.5.5 0 0 1 0 1H8.5V9a.5.5 0 0 1-1 0V7.5H6a.5.5 0 0 1 0-1h1.5V5z" />
                             </svg>
                         </div>
-                        <h3 class="text-center font-semibold text-black "> Sci-Fi </h3>
-                    </div>
-                    <div class="w-full p-8 text-center transition-all bg-white rounded shadow hover:shadow-lg">
+                        <h3 class="text-center font-semibold text-black"> Sci-Fi </h3>
+                </button>
+                <button class="w-full p-8 text-center transition-all bg-white rounded shadow hover:shadow-lg genre-button" data-genre="Romance">
                         <div class="inline-block p-2 mb-4 bg-blue-400 rounded-full text-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="text-white" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm-.5 5a.5.5 0 0 1 1 0v1.5H10a.5.5 0 0 1 0 1H8.5V9a.5.5 0 0 1-1 0V7.5H6a.5.5 0 0 1 0-1h1.5V5z" />
                             </svg>
                         </div>
                         <h3 class="text-center font-semibold text-black"> Romance </h3>
-                    </div>
+                </button>
 
-                    <div class="w-full p-8 text-center transition-all bg-white rounded shadow hover:shadow-lg">
+                <button class="w-full p-8 text-center transition-all bg-white rounded shadow hover:shadow-lg genre-button" data-genre="Magic">
                         <div class="inline-block p-2 mb-4 bg-blue-400 rounded-full text-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="text-white" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm-.5 5a.5.5 0 0 1 1 0v1.5H10a.5.5 0 0 1 0 1H8.5V9a.5.5 0 0 1-1 0V7.5H6a.5.5 0 0 1 0-1h1.5V5z" />
                             </svg>
                         </div>
-                        <h3 class="text-center font-semibold text-black "> Magic </h3>
-                    </div>
+                        <h3 class="text-center font-semibold text-black"> Magic </h3>
+                </button>
 
-                    <div class="w-full p-8 text-center transition-all bg-white rounded shadow hover:shadow-lg">
+                <button class="w-full p-8 text-center transition-all bg-white rounded shadow hover:shadow-lg genre-button" data-genre="Myth">
                         <div class="inline-block p-2 mb-4 bg-blue-400 rounded-full text-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="text-white" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm-.5 5a.5.5 0 0 1 1 0v1.5H10a.5.5 0 0 1 0 1H8.5V9a.5.5 0 0 1-1 0V7.5H6a.5.5 0 0 1 0-1h1.5V5z" />
                             </svg>
                         </div>
-                        <h3 class="text-center font-semibold text-black "> Myth </h3>
-                    </div>
+                        <h3 class="text-center font-semibold text-black"> Myth </h3>
+                </button>
 
-                    <div class="w-full p-8 text-center transition-all bg-white rounded shadow hover:shadow-lg">
+                <button class="w-full p-8 text-center transition-all bg-white rounded shadow hover:shadow-lg genre-button" data-genre="Folk">
                         <div class="inline-block p-2 mb-4 bg-blue-400 rounded-full text-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="text-white" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm-.5 5a.5.5 0 0 1 1 0v1.5H10a.5.5 0 0 1 0 1H8.5V9a.5.5 0 0 1-1 0V7.5H6a.5.5 0 0 1 0-1h1.5V5z" />
                             </svg>
                         </div>
-                        <h3 class="text-center font-semibold text-black "> Folk </h3>
-                    </div>
+                        <h3 class="text-center font-semibold text-black"> Folk </h3>
+                </button>
 
                 </div>
             </div>
@@ -214,6 +214,7 @@
             <div class="grid grid-cols-1 gap-4 lg:gap-6 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 <!-- product_view.php -->
                 <?php foreach ($products as $product => $value) { ?>
+                    <div class="product-container" data-genre="<?php echo $value['product_genre']; ?>">
                     <div class="relative overflow-hidden bg-white shadow rounded-xl">
                         <div class="relative overflow-hidden">
                             <div class="mb-5 overflow-hidden">
@@ -231,6 +232,7 @@
                                 Add To Cart
                             </button>
                         </div>
+                    </div>
                     </div>
                 <?php } ?>
 
@@ -308,7 +310,25 @@
 
 
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+    $(document).ready(function () {
+        // Handle genre button click
+        $('.genre-button').click(function () {
+            // Get the genre from the button text
+            var selectedGenre = $(this).find('h3').text().trim();
 
+            // Optionally, you can log the selected genre
+            console.log('Selected Genre:', selectedGenre);
+
+            // Hide all products
+            $('.product-container').hide();
+
+            // Show only products with the selected genre
+            $('[data-genre="' + selectedGenre + '"]').show();
+        });
+    });
+    </script>
 
 
 </body>
