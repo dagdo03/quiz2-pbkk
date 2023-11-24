@@ -64,14 +64,7 @@ class Auth extends BaseController
                         'loginned'=>'loginned'
                     ];
                     $session->set($sess_data);
-                    // if($record['user_type'] == 'user') {
-                    //     //go to user page
-                    //     $url = "user/user_dashboard";
-                    // } else if($record['user_type']=='admin') {
-                    //     //go to admin page 
-                    //     $url = "admin/admin_dashboard";
-                    // }
-                // return redirect()->to(base_url($url));
+                    return redirect()->to('mdashboard/home');
                 } else {
                     $session->set('failed_message',"Record does not match, try again");
                     $session->markAsFlashdata('failed_message');
