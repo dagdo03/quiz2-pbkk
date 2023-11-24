@@ -18,8 +18,9 @@ class Product extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => 255,
             ],
-            'product_des' => [
-                'type' => 'TEXT',
+            'product_genre' => [
+                'type' => 'VARCHAR',
+                'constraint' => 255,
             ],
             'qty' => [
                 'type' => 'INTEGER',

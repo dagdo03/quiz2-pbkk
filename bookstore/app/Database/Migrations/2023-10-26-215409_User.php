@@ -14,11 +14,7 @@ class User extends Migration
                 'constraint' => 11,
                 'auto_increment' => true,
             ],
-            'first_name' => [
-                'type' => 'VARCHAR',
-                'constraint' => 255,
-            ],
-            'last_name' => [
+            'username' => [
                 'type' => 'VARCHAR',
                 'constraint' => 255,
             ],
@@ -33,9 +29,6 @@ class User extends Migration
             'password' => [
                 'type' => 'VARCHAR',
                 'constraint' => 255,
-            ],
-            'profile_pic' => [
-                'type' => 'TEXT',
             ],
             'created_at' => [
                 'type' => 'TIMESTAMP',
