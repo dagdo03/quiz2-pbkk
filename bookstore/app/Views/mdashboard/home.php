@@ -121,7 +121,7 @@
         </div>
     </section>
 
-    <!-- testimonial -->
+    <!-- Fiction Genre -->
 
     <section class="flex items-center justify-center bg-gray-100  lg:h-2/3">
         <div class="px-4 py-20 mx-auto max-w-7xl">
@@ -212,103 +212,28 @@
     <section class="flex items-center py-5 bg-gray-100 h-1/2 ">
         <div class="px-4 mx-auto max-w-7xl">
             <div class="grid grid-cols-1 gap-4 lg:gap-6 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                <div class="relative overflow-hidden bg-white shadow rounded-xl ">
-                    <div class="relative overflow-hidden">
-                        <div class="mb-5 overflow-hidden">
-                            <!-- Product -->
-                            <img class="object-cover w-full mx-auto transition-all rounded h-72 hover:scale-110" src="/img/23052.jpg" alt="">
+                <!-- product_view.php -->
+                <?php foreach ($products as $product => $value) { ?>
+                    <div class="relative overflow-hidden bg-white shadow rounded-xl">
+                        <div class="relative overflow-hidden">
+                            <div class="mb-5 overflow-hidden">
+                                <img class="object-cover w-full mx-auto transition-all rounded h-72 hover:scale-110" src="/img/23052.jpg" alt="">
+                            </div>
                         </div>
+                        <a>
+                            <h3 class="px-5 mb-4 text-lg font-bold"><?php echo ($value['product_name']); ?></h3>
+                        </a>
+                        <div class="flex">
+                            <div class="w-1/2 px-5 pb-3">
+                                <p class="text-lg font-bold text-blue-500"><?php echo ($value['selling_price']); ?></p>
+                            </div>
+                            <button class="flex-1 text-sm text-white transition-all bg-blue-500 rounded-r-none hover:bg-blue-600 rounded-t-xl">
+                                Add To Cart
+                            </button>
+                        </div>
+                    </div>
+                <?php } ?>
 
-                    </div>
-                    <a>
-                        <h3 class="px-5 mb-4 text-lg font-bold "> Hobbit 3
-                            White Mountain last chapter </h3>
-                    </a>
-                    <div class="flex">
-                        <div class="w-1/2 px-5 pb-3">
-                            <p class="text-lg font-bold text-blue-500 ">
-                                $299.99
-                            </p>
-                            <span class="block -mt-1 text-xs font-semibold text-gray-400 line-through">$399.99</span>
-                        </div>
-                        <button class="flex-1 text-sm text-white transition-all bg-blue-500 rounded-r-none hover:bg-blue-600 rounded-t-xl">
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <!-- Product -->
-                <div class="relative overflow-hidden bg-white shadow rounded-xl ">
-                    <div class="relative overflow-hidden">
-                        <div class="mb-5 overflow-hidden">
-                            <img class="object-cover w-full mx-auto transition-all rounded h-72 hover:scale-110" src="/img/23052.jpg" alt="">
-                        </div>
-
-                    </div>
-                    <a>
-                        <h3 class="px-5 mb-4 text-lg font-bold "> Harry Potter Edition : Killing Chamber Arc
-                        </h3>
-                    </a>
-                    <div class="flex">
-                        <div class="w-1/2 px-5 pb-3">
-                            <p class="text-lg font-bold text-blue-500 ">
-                                $299.99
-                            </p>
-                            <span class="block -mt-1 text-xs font-semibold text-gray-400 line-through">$399.99</span>
-                        </div>
-                        <button class="flex-1 text-sm text-white transition-all bg-blue-500 rounded-r-none hover:bg-blue-600 rounded-t-xl">
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <!-- Product -->
-                <div class="relative overflow-hidden bg-white shadow rounded-xl ">
-                    <div class="relative overflow-hidden">
-                        <div class="mb-5 overflow-hidden">
-                            <img class="object-cover w-full mx-auto transition-all rounded h-72 hover:scale-110" src="/img/23052.jpg" alt="">
-                        </div>
-
-                    </div>
-                    <a>
-                        <h3 class="px-5 mb-4 text-lg font-bold "> Kancil dan Buaya
-                            special edition
-                        </h3>
-                    </a>
-                    <div class="flex">
-                        <div class="w-1/2 px-5 pb-3">
-                            <p class="text-lg font-bold text-blue-500 ">
-                                $299.99
-                            </p>
-                            <span class="block -mt-1 text-xs font-semibold text-gray-400 line-through">$399.99</span>
-                        </div>
-                        <button class="flex-1 text-sm text-white transition-all bg-blue-500 rounded-r-none hover:bg-blue-600 rounded-t-xl">
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
-                <!-- Product -->
-                <div class="relative overflow-hidden bg-white shadow rounded-xl ">
-                    <div class="relative overflow-hidden">
-                        <div class="mb-5 overflow-hidden">
-                            <img class="object-cover w-full mx-auto transition-all rounded h-72 hover:scale-110" src="/img/23052.jpg" alt="">
-                        </div>
-
-                    </div>
-                    <a>
-                        <h3 class="px-5 mb-4 text-lg font-bold "> Malin Kundang Special edition in Sulawesi
-                        </h3>
-                    </a>
-                    <div class="flex">
-                        <div class="w-1/2 px-5 pb-3">
-                            <p class="text-lg font-bold text-blue-500 ">
-                                $299.99
-                            </p>
-                            <span class="block -mt-1 text-xs font-semibold text-gray-400 line-through">$399.99</span>
-                        </div>
-                        <button class="flex-1 text-sm text-white transition-all bg-blue-500 rounded-r-none hover:bg-blue-600 rounded-t-xl">
-                            Add To Cart
-                        </button>
-                    </div>
-                </div>
             </div>
         </div>
 
